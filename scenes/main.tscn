@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bbswqvlufrsmd"]
+
+[ext_resource type="Script" uid="uid://b5f6u8y15lkt2" path="res://scenes/main.gd" id="1_main"]
+
+[node name="Main" type="Node" unique_id=948386762]
+script = ExtResource("1_main")
+
+[node name="HelloLabel" type="Label" parent="." unique_id=2100616308]
+text = "Hello World"
+
+[node name="HelloNodeZig" type="HelloNodeZig" parent="." unique_id=1516539917]

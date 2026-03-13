@@ -1,0 +1,65 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug via Godot Editor",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "G:/libraries/godot/bin/godot.windows.editor.x86_64.exe",
+            "args": [
+                "--path", "${workspaceFolder}",
+                "--editor"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Load symbols from our DLL",
+                    "text": "add-symbol-file ${workspaceFolder}/binaries/zigtest.windows.x86_64.dll",
+                    "ignoreFailures": true
+                }
+            ],
+            "sourceFileMap": {
+                "${workspaceFolder}/source": "${workspaceFolder}/source"
+            }
+        },
+        {
+            "name": "Debug Headless (no window)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "G:/libraries/godot/bin/godot.windows.editor.x86_64.exe",
+            "args": [
+                "--path", "${workspaceFolder}",
+                "--headless",
+                "--quit"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Load symbols from our DLL",
+                    "text": "add-symbol-file ${workspaceFolder}/binaries/zigtest.windows.x86_64.dll",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
